@@ -25,12 +25,12 @@ class Song
     end 
   end 
   
-  # def genres 
-  #   @genre = genre
-  #   if !@@genres.include?(genre)
-  #     @@genres << genre
-  #   end 
-  # end 
+  def genres 
+    @genre = genre
+    if !@@genres.include?(genre)
+      @@genres << genre
+    end 
+  end 
   
   # def genre_count
   #   @@genres.count
