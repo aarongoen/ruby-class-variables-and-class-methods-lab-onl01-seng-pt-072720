@@ -20,7 +20,7 @@ class Song
   end
   
   def count
-    @@name.count  
+    @name.count  
   end 
   
   def artists=(artist)
@@ -32,19 +32,18 @@ class Song
   def genres 
     @genre = genre
     if !@@genres.include?(genre)
-      @@genres << genres
+      @@genres << genre
     end 
   end 
   
   def genre_count
-    @@genres << @genre
     @@genres.count
   end 
   
-#   def self.artist_count
-#     Song.map do |name, artist|
-#     Song[artist] = name.count 
-#     end
-#     Song 
-#   end 
+  def self.artist_count
+    Song.map do |name, artist|
+    Song[artist] = name.count 
+    end
+    Song 
+  end 
 end 
