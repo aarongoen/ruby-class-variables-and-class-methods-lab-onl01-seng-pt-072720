@@ -2,25 +2,21 @@ class Song
   
   attr_accessor :name, :artist, :genre
   
-  @@artists = [] 
-   
+  @@count = 0 
+  @@genres = [] 
+  @@artists = []
+
   def initialize(name, artist, genre)
     @name = name
     @artist = artist
     @genre = genre
-   
-    @@count = count 
-    
-    @@genres = [] 
-
-    @@artists = []
-
-    # @@artist_count = {}
-    # @@genre_count = {}
+    @@count += 1 
+    @@artists << artist 
+    @@genres << genre 
   end
   
-  def count
-    @name.count  
+  def self.count
+    @@count 
   end 
   
   def artists=(artist)
@@ -41,8 +37,8 @@ class Song
   end 
   
   def self.artist_count
-    Song.map do |name, artist|
-    Song[artist] = name.count 
+    @@artists.each do |name, artist|
+    @@artists[artist] = name.count 
     end
     Song 
   end 
