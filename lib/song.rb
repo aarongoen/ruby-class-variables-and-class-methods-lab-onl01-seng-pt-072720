@@ -20,21 +20,21 @@ class Song
   end 
   
   def self.artists
-     @unique_artists = []
+     unique_artists = []
      @@artists.each do |artist|
-      @unique_artists << artist 
       if !@unique_artists.include?(artist)
+         @unique_artists << artist 
     end
     unique_artists 
     end 
   end 
   
-  # def genres 
-  #   @genre = genre
-  #   if !@@genres.include?(genre)
-  #     @@genres << genre
-  #   end 
-  # end 
+  def genres 
+    @genre = genre
+    if !@@genres.include?(genre)
+      @@genres << genre
+    end 
+  end 
   
   def self.genre_count
     @genre_hash = {}
