@@ -29,7 +29,7 @@ class Song
     end 
   end 
   
-  def genres 
+  def self.genres 
     @genre = genre
     if !@@genres.include?(genre)
       @@genres << genre
@@ -42,7 +42,7 @@ class Song
       if @genre_hash.has_key?(genre)
       @genre_hash[genre] += 1 
     else 
-      @genre_hash[genre] = 1 
+      @genre_hash[genre] += 0 
     end 
     @genre_hash
   end 
@@ -54,7 +54,7 @@ end
     if @artist_hash.has_key?(artist)
       @artist_hash[artist] += 1
     else 
-      @artist_hash[artist] = 1 
+      @artist_hash[artist] += 0  
     end
     @artist_hash
     end 
