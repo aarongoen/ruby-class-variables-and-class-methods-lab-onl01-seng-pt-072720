@@ -22,8 +22,8 @@ class Song
   def self.artists
      unique_artists = []
      @@artists.each do |artist|
-    unless @unique_artists.include?(artist)
-         @unique_artists << artist 
+    unless unique_artists.include?(artist)
+         unique_artists << artist 
     end
   end 
     unique_artists 
@@ -38,14 +38,14 @@ class Song
   end 
   
   def self.genre_count
-    @genre_hash = {}
+    genre_hash = {}
     @@genres.each do |genre| 
-      if @genre_hash.has_key?(genre)
-      @genre_hash[genre] += 1 
+      if genre_hash.has_key?(genre)
+      genre_hash[genre] += 1 
     else 
-      @genre_hash[genre] += 0 
+      genre_hash[genre] += 0 
     end 
-    @genre_hash
+    genre_hash
   end 
 end 
   
