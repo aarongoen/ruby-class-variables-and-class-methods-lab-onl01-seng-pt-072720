@@ -32,7 +32,7 @@ class Song
   #   end 
   # end 
   
-  def genre_count
+  def self.genre_count
     @genre_hash = {}
     @@genres.each {|genre| if @genre_hash.has_key?(genre)}
       @genre_hash[genre] += 1 
