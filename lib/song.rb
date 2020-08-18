@@ -46,7 +46,7 @@ class Song
       if genre_hash.has_key?(genre)
       genre_hash[genre] += 1 
     else 
-      genre_hash[genre] += 0 
+      genre_hash[genre] = 1  
     end 
     genre_hash
   end 
@@ -58,7 +58,7 @@ end
     if @artist_hash.has_key?(artist)
       @artist_hash[artist] += 1
     else 
-      @artist_hash[artist] += 0  
+      @artist_hash[artist] = 1   
     end
     @artist_hash
     end 
