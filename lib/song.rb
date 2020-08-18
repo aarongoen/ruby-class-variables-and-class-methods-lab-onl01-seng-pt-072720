@@ -19,9 +19,13 @@ class Song
     @@count 
   end 
   
-  def artists=(artist)
-    @artist = artist
-      @@artists << artist 
+  def self.artists
+     @unique_artists = []
+     @@artists.each do |artist|
+      @unique_artists << artist 
+      unless unique_artists.include?(artist)
+    end
+    unique_artists 
     end 
   end 
   
