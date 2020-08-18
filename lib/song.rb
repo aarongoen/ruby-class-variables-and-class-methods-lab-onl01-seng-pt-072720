@@ -44,12 +44,12 @@ class Song
   end 
 end 
   
-  # def artist_count
-  #   @artist_hash = {}
-  #   @@artists.each do |artist|
-  #   if @artist_hash[artist] = name.count 
-  #   end
-  # end 
-  #   @@artists  
-  # end 
-# end 
+  def artist_count
+    @artist_hash = {}
+    @@artists.each do |artist|
+    if @artist_hash[artist] = name.count 
+    end
+  end 
+    @@artists  
+  end 
+end 
